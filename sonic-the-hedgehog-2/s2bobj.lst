@@ -1,0 +1,4595 @@
+;Sonic 2 Object Listing File
+
+;Sprite Listing Loads all sprites used to represent objects in this game
+;- Set codes are as follows-
+;  0 is stuff.spr
+;  1 is s2obj1.spr
+;  2 is s2obj2.spr
+;  etc
+;- xoff in file is the x position of the top-left corner of the sprite in
+;  the file it will be loaded from
+;- yoff in file is the y position of the top-left corner of the sprite in
+;  the file it will be loaded from
+;- Width is the width (in pixels) of the sprite
+;- Height is the height (in pixels) of the sprite
+
+      # of sprite sets:     3
+
+ # of Sprites in set 0:    20
+ ;GENERAL SET
+
+         ;RING
+         Sprite 0 file:     1
+          xoff in file:    98
+          yoff in file:    15
+                 Width:    16
+                Height:    16
+
+         ;QUESTION ICON
+         Sprite 1 file:     1
+          xoff in file:    81
+          yoff in file:     0
+                 Width:    16
+                Height:    14
+
+          ;RING ICON
+         Sprite 2 file:     1
+          xoff in file:    30
+          yoff in file:     0
+                 Width:    16
+                Height:    14
+
+         ;SHIELD ICON
+         Sprite 3 file:     1
+          xoff in file:    47
+          yoff in file:     0
+                 Width:    16
+                Height:    14
+
+         ;INVINCIBLE ICON
+         Sprite 4 file:    1
+          xoff in file:    30
+          yoff in file:    15
+                 Width:    16
+                Height:    14
+
+         ;SHOE ICON
+         Sprite 5 file:     1
+          xoff in file:    47
+          yoff in file:    15
+                 Width:    16
+                Height:    14
+
+         ;WARP ICON
+         Sprite 6 file:     1
+          xoff in file:    64
+          yoff in file:     0
+                 Width:    16
+                Height:    14
+
+         ;SONIC ICON
+         Sprite 7 file:     1
+          xoff in file:    64
+          yoff in file:    15
+                 Width:    16
+                Height:    14
+
+         ;TAILS ICON
+         Sprite 8 file:     1
+          xoff in file:    81
+          yoff in file:    15
+                 Width:    16
+                Height:    14
+
+         ;EGGMAN ICON
+         Sprite 9 file:     1
+          xoff in file:    98
+          yoff in file:     0
+                 Width:    16
+                Height:    14
+
+        ;BLANK MONITOR
+        Sprite 10 file:     1
+          xoff in file:     0
+          yoff in file:     0
+                 Width:    30
+                Height:    30
+
+        ;END SIGN FACE
+        Sprite 11 file:     1
+          xoff in file:     0
+          yoff in file:    30
+                 Width:    48
+                Height:    32
+
+        ;END SIGN STEM
+        Sprite 12 file:     1
+          xoff in file:    21
+          yoff in file:    62
+                 Width:     6
+                Height:    16
+
+        ;EGG CAGE TOP
+        Sprite 13 file:     1
+          xoff in file:    64
+          yoff in file:    31
+                 Width:    32
+                Height:    20
+
+        ;EGG CAGE BOTTOM
+        Sprite 14 file:     1
+          xoff in file:    48
+          yoff in file:    51
+                 Width:    64
+                Height:    60
+
+        ;STARPOST
+        Sprite 15 file:     1
+          xoff in file:   113
+          yoff in file:    47
+                 Width:    16
+                Height:    64
+
+        ;SPRING COIL
+        Sprite 16 file:     1
+          xoff in file:     8
+          yoff in file:    87
+                 Width:    16
+                Height:     8
+
+        ;SPRING PAD YELLOW
+        Sprite 17 file:     1
+          xoff in file:     0
+          yoff in file:    79
+                 Width:    32
+                Height:     8
+
+        ;SPRING PAD RED
+        Sprite 18 file:     1
+          xoff in file:     0
+          yoff in file:    95
+                 Width:    32
+                Height:     8
+
+        ;SPIKES
+        Sprite 19 file:     1
+          xoff in file:   115
+          yoff in file:     0
+                 Width:    32
+                Height:    32
+
+ # of Sprites in set 1:     4
+ ;EMERALD HILL SET
+
+         ;BUZZER
+         Sprite 0 file:    10
+          xoff in file:     0
+          yoff in file:     0
+                 Width:    48
+                Height:    16
+
+         ;COCONUTS
+         Sprite 1 file:    10
+          xoff in file:    50
+          yoff in file:     0
+                 Width:    26
+                Height:    45
+
+         ;MASHER
+         Sprite 2 file:    10
+          xoff in file:    77
+          yoff in file:     0
+                 Width:    20
+                Height:    32
+
+         ;MOVING/FALLING PLATFORM
+         Sprite 3 file:    10
+          xoff in file:    98
+          yoff in file:     0
+                 Width:    64
+                Height:    32
+
+ # of Sprites in set 2:     1
+ ;AQUATIC RUIN SET
+
+         ;MOVING/FALLING PLATFORM
+         Sprite 0 file:    20
+          xoff in file:     0
+          yoff in file:     0
+                 Width:    64
+                Height:    45
+
+;Object Listing gives identity to each of the objects listed
+;- Main ID is the high byte of the object value (hex value)
+;- Secondary ID is the low byte of the object's value (hex value)
+;- # of Zones is the number of zones that contain a different definition
+;  for this object. If the object remains constant, it must be set to 1.
+;  Values after this repeat for as many times as the value of this entry
+;- Zone Entry is the zone that this object entry is valid in. All entries
+;  must at least have a default entry (the data used on all levels that
+;  do not have any extra data specifically listed for them). If the entry
+;  is the default entry, this value must be 0x18 (hex value)
+;- XMin the leftmost offset (in pixels) from the object position that the
+;  mouse pointer can touch
+;- XMax the rightmost offset (in pixels) from the object position that the
+;  mouse pointer can touch
+;- YMin the topmost offset (in pixels) from the object position that the
+;  mouse pointer can touch
+;- YMax the bottommost offset (in pixels) from the object position that the
+;  mouse pointer can touch
+;- Description contains a (40 char max) textual description of the object
+;- Property ? indicates that the following information is for any of the
+;  special properties (the third number listed inside SonED). There are
+;  0x0F (16) of these, and not all of them represent something unique.
+;  If the value here is set to the value of the current entry or above,
+;  then you will need to enter the following types of data for this entry.
+;  If the value is set to the value of a previous entry, then the data
+;  will be taken from that entry instead, and you need-not list anything.
+;  All data prompts for this entry are preceded by a -.
+;- # of Sprites is how many individual sprites to combine to make a visual
+;  representation of this object (all qualities of individual sprites are
+;  listed after this item with a - at the beginning)
+;- Sprite ? ID is the ID number of the sprite (in it's respective set) that
+;  you wish to be drawn
+;- Set is the sprite set in which the sprite you want is located
+;- Direction is the direction you would like the sprite to be drawn-
+;  * 0- Normal
+;  * 1- Backwards
+;  * 2- Upside-down
+;  * 3- Backwards and Upside-down
+;- xoff is the offset on the x axis from the objects position where you want
+;  the sprite to be drawn
+;- yoff is the offset on the y axis from the objects position where you want
+;  the sprite to be drawn
+
+Num of objects:  125
+
+Object Main ID:  03
+  Secondary ID:  20
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: tag: arz loop
+  * Property 0:   0
+ - Description: property unknown
+ -# of Sprites:   1
+ --Sprite 1 ID:   1
+ --        Set:   0
+ --  Direction:   0
+ --       xoff:  -8
+ --       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  03
+  Secondary ID:  21
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: tag: arz loop 2
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  03
+  Secondary ID:  91
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: tag: ehz/arz loop
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  03
+  Secondary ID:  A8
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz loop
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  06
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ehz: twisted ramps
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  06
+  Secondary ID:  80
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: mz: spinning spiral tube
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  0D
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -24
+          XMax:  24
+          YMin: -14
+          YMax:  34
+   Description: end level sign
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  11
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -24
+  -       yoff: -14
+  -Sprite 2 ID:  12
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -2
+  -       yoff:  18
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  11
+  Secondary ID:  08
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: bridge: 8 blocks
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  11
+  Secondary ID:  0A
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: bridge: 10 blocks
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  11
+  Secondary ID:  0C
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: bridge: 12 blocks
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  11
+  Secondary ID:  0E
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: bridge: 14 blocks
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  11
+  Secondary ID:  10
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: bridge: 16 blocks
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  12
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: hpz: emerald
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  18
+  Secondary ID:  01
++   # of Zones:   2
++   Zone Entry:  18
+          XMin: -32
+          XMax:  32
+          YMin: -12
+          YMax:  20
+   Description: ehz/arz: horizontally moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   3
+  -        Set:   1
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -12
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
++   Zone Entry:  0F
+          XMin: -32
+          XMax:  32
+          YMin: -12
+          YMax:  33
+   Description: arz/arz: horizontally moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   0
+  -        Set:   2
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -12
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  18
+  Secondary ID:  02
++   # of Zones:   2
++   Zone Entry:  18
+          XMin: -32
+          XMax:  32
+          YMin: -12
+          YMax:  20
+   Description: ehz/arz: vertically moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   3
+  -        Set:   1
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -12
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
++   Zone Entry:  0F
+          XMin: -32
+          XMax:  32
+          YMin: -12
+          YMax:  33
+   Description: ehz/arz: vertically moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   0
+  -        Set:   2
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -12
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  18
+  Secondary ID:  03
++   # of Zones:   2
++   Zone Entry:  18
+          XMin: -32
+          XMax:  32
+          YMin: -12
+          YMax:  20
+   Description: ehz/arz: falling platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   3
+  -        Set:   1
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -12
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
++   Zone Entry:  0F
+          XMin: -32
+          XMax:  32
+          YMin: -12
+          YMax:  33
+   Description: ehz/arz: falling platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   0
+  -        Set:   2
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -12
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  18
+  Secondary ID:  9B
++   # of Zones:   2
++   Zone Entry:  18
+          XMin: -32
+          XMax:  32
+          YMin: -12
+          YMax:  20
+   Description: ehz/arz: big vertically moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   3
+  -        Set:   1
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -12
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
++   Zone Entry:  0F
+          XMin: -32
+          XMax:  32
+          YMin: -12
+          YMax:  33
+   Description: ehz/arz: big vertically moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   0
+  -        Set:   2
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -12
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  19
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: horizontally moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  19
+  Secondary ID:  02
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: vertically moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  19
+  Secondary ID:  1F
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: rotational moving platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  1B
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: wheel booster
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  1C
+  Secondary ID:  02
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ehz: bridge stake
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  1D
+  Secondary ID:  05
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: jumping blue ooze (pops out)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  1D
+  Secondary ID:  15
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: jumping blue ooze (2 pipes)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  1E
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: warp pipe
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  1F
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: collapsing pathway
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  22
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: arrow-launching pillar
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  23
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: breakaway pillar
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  24
+  Secondary ID:  80
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: air bubbles
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  25
+  Secondary ID:  02
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ring (object placement format)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   0
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  00 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: blank (harmful)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  1 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: 1up
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   7
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  02 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: tails icon (ineffective)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   8
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  03 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: eggman icon (harmful)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   9
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  04 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: super ring (10 rings)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   2
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  05 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: super sneakers
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   5
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  06 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: shield
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10 
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   3
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  07 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: invincibility
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   4
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  08 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: warp
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   6
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  26
+  Secondary ID:  09 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: monitor: mystery
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  10
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -15
+  -       yoff: -15
+  -Sprite 2 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -10
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  2B
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: rising breakable pillar
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  2C
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: falling leaves
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  32
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: breakable pipe entrance
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: spikes: still 1 horizontal
+  * Property 0:   0
+ - Description: rightside up
+  # of Sprites:   1
+  -Sprite 1 ID:  19
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -16
+  -       yoff: -16
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   4
+ - Description: upside down
+  # of Sprites:   1
+  -Sprite 1 ID:  19
+  -        Set:   0
+  -  Direction:   2
+  -       xoff: -16
+  -       yoff: -16
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   8
+ - Description: upside down
+  # of Sprites:   1
+  -Sprite 1 ID:  19
+  -        Set:   0
+  -  Direction:   2
+  -       xoff: -16
+  -       yoff: -16
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin: -16
+          YMax:  16
+   Description: spikes: moving 1 horizontal
+  * Property 0:   0
+ - Description: rightside up
+  # of Sprites:   1
+  -Sprite 1 ID:  19
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -16
+  -       yoff: -16
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   4
+ - Description: upside down
+  # of Sprites:   1
+  -Sprite 1 ID:  19
+  -        Set:   0
+  -  Direction:   2
+  -       xoff: -16
+  -       yoff: -16
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   8
+ - Description: upside down
+  # of Sprites:   1
+  -Sprite 1 ID:  19
+  -        Set:   0
+  -  Direction:   2
+  -       xoff: -16
+  -       yoff: -16
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  10
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: still 2 horizontal
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  11
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: moving 2 horizontal
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  20
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: still 3 horizontal
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  21
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: moving 3 horizontal
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  30
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: still 4 horizontal
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  31
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: moving 4 horizontal
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  40
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: still 1 vertical
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  41
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: moving 1 vertical
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  50
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: still 2 vertical
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  51
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: moving 2 vertical
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  60
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: still 3 vertical
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  61
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: moving 3 vertical
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  70
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: still 4 vertical
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  36
+  Secondary ID:  71
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: spikes: moving 4 vertical
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  3E
+  Secondary ID:  00 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -32
+          XMax:  32
+          YMin: -46
+          YMax:  34
+   Description: end level capsule
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  13
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -16
+  -       yoff: -46
+  -Sprite 2 ID:  14
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -32
+  -       yoff: -26
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  40
+  Secondary ID:  03
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz/arz: red bounce pad
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  00 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin:  -8
+          YMax:   8
+   Description: red spring up
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  18
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -16
+  -       yoff:  -8
+  -Sprite 2 ID:  16
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:   0
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  02 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin:  -8
+          YMax:   8
+   Description: yellow spring up
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  17
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -16
+  -       yoff:  -8
+  -Sprite 2 ID:  16
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:   0
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  03 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin:  -8
+          YMax:   8
+   Description: yellow spring up
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  17
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -16
+  -       yoff:  -8
+  -Sprite 2 ID:  16
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:   0
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  09 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin:  -8
+          YMax:   8
+   Description: red spring up
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  18
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -16
+  -       yoff:  -8
+  -Sprite 2 ID:  16
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:   0
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  0B
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -16
+          XMax:  16
+          YMin:  -8
+          YMax:   8
+   Description: yellow spring up
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   2
+  -Sprite 1 ID:  17
+  -        Set:   0
+  -  Direction:   0
+  -       xoff: -16
+  -       yoff:  -8
+  -Sprite 2 ID:  16
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:   0
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  10
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: red spring right
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  12
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: yellow spring left
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  20
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: red spring down
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  41
+  Secondary ID:  32
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: yellow spring diagonal
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  42
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: mz: steam spring
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  44
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: bumper
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  47
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: button
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  49
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ehz: waterfall (tall)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  49
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ehz: waterfall (short)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  49
+  Secondary ID:  02
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ehz: waterfall (medium)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  49
+  Secondary ID:  03
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ehz: waterfall (very tall)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  4A
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ooz: octus
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  4C
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: hpz: batbot
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  4F
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: hpz: dinobot
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  50
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ooz: aquis
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  6B
+  Secondary ID:  19
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: rotating yellow blocks
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  70
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: mz: turning gears
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  72
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: conveyor belt
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  74
+  Secondary ID:  17
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: invisible barrier (used for crushing)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  74
+  Secondary ID:  33
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: invisible barrier (used for crushing)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  79
+  Secondary ID:  01 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin: -40
+          YMax:  24
+   Description: starpost number 1
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  15
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -40
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  79
+  Secondary ID:  02 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin: -40
+          YMax:  24
+   Description: starpost number 2
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  15
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -40
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  79
+  Secondary ID:  03 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin: -40
+          YMax:  24
+   Description: starpost number 3
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  15
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -40
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  79
+  Secondary ID:  04 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin: -40
+          YMax:  24
+   Description: starpost number 4
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  15
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -40
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  79
+  Secondary ID:  05 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin: -40
+          YMax:  24
+   Description: starpost number 5
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  15
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -40
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  79
+  Secondary ID:  06 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin: -40
+          YMax:  24
+   Description: starpost number 6
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  15
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -40
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  79
+  Secondary ID:  07 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin: -40
+          YMax:  24
+   Description: starpost number 7
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  15
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -40
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  79
+  Secondary ID:  08 
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin: -40
+          YMax:  24
+   Description: starpost number 8
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:  15
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -40
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  7A
+  Secondary ID:  0C
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: moving yellow platform
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  7B
+  Secondary ID:  02
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: warp pipe exit spring
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  7C
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: tall bacground tower
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  83
+  Secondary ID:  10
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: 3 rotating platforms
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  84
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: tag: cnz pinball mode enable/disable
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  86
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: pinball flipper
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  8C
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: whisp
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  8D
+  Secondary ID:  02
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: grounder (in wall)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  91
+  Secondary ID:  08
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: arz: shark badnik
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  92
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: htz: spiker
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  99
+  Secondary ID:  12
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: scz: nebula
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  9D
+  Secondary ID:  1E
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:  18
+          YMin: -14
+          YMax:  31
+   Description: ehz: coconuts
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   1
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff: -14
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  9E
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: mcz: crawlton
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  9F
+  Secondary ID:  24
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: mz: shellcracker
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  A3
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: mcz: flasher
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  A5
+  Secondary ID:  32
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: spiny (on ground)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  A6
+  Secondary ID:  32
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: spiny (facing left)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  A7
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cpz: grabber
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  AC
+  Secondary ID:  40
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: scz: balkiry
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  B2
+  Secondary ID:  52
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: wfz: plane gets hit by laser
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  B9
+  Secondary ID:  76
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: wfz: huge laser
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  CB
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -24
+          XMax:  24
+          YMin:  -8
+          YMax:   8
+   Description: ehz: buzzer
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   0
+  -        Set:   1
+  -  Direction:   0
+  -       xoff: -24
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D2
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: green disappearing walkway
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D3
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin: -10
+          XMax:  10
+          YMin: -16
+          YMax:  16
+   Description: ehz: masher
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   2
+  -        Set:   1
+  -  Direction:   0
+  -       xoff: -10
+  -       yoff: -16
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D4
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: ehz: snailbot
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D5
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: elevator (format unknown)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D6
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: point bonus slot
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D6
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: slot machine
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D7
+  Secondary ID:  00
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: blue bumper
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D7
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: blue bumper moving horizontally
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+
+Object Main ID:  D8
+  Secondary ID:  01
++   # of Zones:   1
++   Zone Entry:  18
+          XMin:  -8
+          XMax:   8
+          YMin:  -8
+          YMax:   8
+   Description: cnz: green point target (horizontal)
+  * Property 0:   0
+ - Description: property unknown
+  # of Sprites:   1
+  -Sprite 1 ID:   1
+  -        Set:   0
+  -  Direction:   0
+  -       xoff:  -8
+  -       yoff:  -8
+  * Property 1:   0
+  * Property 2:   0
+  * Property 3:   0
+  * Property 4:   0
+  * Property 5:   0
+  * Property 6:   0
+  * Property 7:   0
+  * Property 8:   0
+  * Property 9:   0
+  * Property A:   0
+  * Property B:   0
+  * Property C:   0
+  * Property D:   0
+  * Property E:   0
+  * Property F:   0
+

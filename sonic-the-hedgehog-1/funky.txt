@@ -1,0 +1,65 @@
+================================================================================
+Sonic the Hedgehog - Level Template
+Created by Damian Grove (c)1999-2000
+VERSION - 1.20a
+================================================================================
+
+AUTHOR                Stealth
+DATE                  11/08/00 -> 7/18/01
+FILE VERSION          2.00
+SAVESTATE RELEASE     PC
+
+--------------------------------------------------------------------------------
+
+NAME                  Funky Hill
+GAME                  Sonic 1
+                      
+COMPATIBILITY         All
+                      
+TYPE                  Game level
+FILE                  funky.ips
+REPLACED LEVEL        Green Hill
+ACT                   1
+
+--------------------------------------------------------------------------------
+
+DESCRIPTION           An example level made using my
+                      Sonic the Hedgehog editor.
+
+--------------------------------------------------------------------------------
+
+TOOLS                 SonED .016B
+
+--------------------------------------------------------------------------------
+
+NEW LEVEL DESIGN      Yes
+NEW RING LAYOUT       Yes
+NEW OBJECT LAYOUT     Yes
+NEW GRAPHICS          No
+NEW 16x16 MAPPINGS    No
+NEW FLOOR MAPPINGS    No
+MUSIC                 Green Hill
+
+--------------------------------------------------------------------------------
+
+All Changes applied to ROM
+
+--------------------------------------------------------------------------------
+
+MISC CHANGES          Only level and object layout.
+
+--------------------------------------------------------------------------------
+
+PERMISSIONS           This set of files may not be distributed
+                      outside the shareware version of SonED.
+
+--------------------------------------------------------------------------------
+
+SPECIAL THANKS TO     Damian Grove, for sparking
+                      my interest in doing this sort
+                      of thing.
+
+--------------------------------------------------------------------------------
+
+E-MAIL                MStealthA@aol.com
+URL                   http://stealth.emulationzone.org

@@ -1,0 +1,72 @@
+***Release .50B***
+
+**BugFix
+-The double buffer was reallocated to the wrong size after dumping an image map,
+ causing possible crashes
+-PCX output files calculated the size incorrectly, which led to a junk border in
+ some viewers and a corrupt image in others
+-Object Def RAM was mismanaged, causing problems with loading one after another
+-Default object def images were 320x224, the required size is 320x200. Larger
+ images caused crashes when trying to write beyond the input buffer boundary
+-Selectionbox position for selecting and drawing to tiles, blocks, and chunks
+ was miscalculated, leading to writes outside of any one data's boundary and
+ sometimes causing crashes
+-There were mistakes in the de/reallocation of level data storage RAM that could
+ lead to crashes
+-Originally when a new file was loaded after another in the same session, the first
+ file wasn't freed from RAM, causing slow loss of free memory
+-Filesize was miscalculated during reads, which lead to a file growing by one byte
+ during a save once for each time it was loaded
+-The ROM was clipped at the end of the level data, leading to the loss of data
+ created by other programs
+-Misc art storage wasn't properly initialized, leading to memory and crash problems
+-Crashes would occur between loading certain files because the editor was allowed
+ to draw an update before all relevant data was loaded
+-Data for Casino Night bumpers in Sonic 2 was being read in the wrong order
+-The editor keys to change the CNZ bumper types weren't enabled
+-The wrong 256x256 chunk would be affected when attempting to change the propertiles
+ of it's inner 16x16 blocks in Sonic 1 and Sonic CD
+-compress.exe and expand.exe were mistakenly left out of the distribution, disallowing
+ the use of Sonic CD PC support
+
+**Other
+-The old method for calculating filesize traveled through the file byte-by-byte to
+ obtain a pre-calculated number for allocating RAM at once, effectively reading the
+ whole file twice. A better method eliminates that process.
+-The old method for calling the external "compress" and "expand" programs relied on
+ a fixed-value timer to wait until either program was finished, because Windows'
+ "CreateProcess" function for calling external programs will not suspend the parent
+ program (SonED) while a DOS program runs. SonED cannot read from the decompressed
+ files until the external programs are finished without failing, so if the timer was
+ ever insufficient, the program would crash. The new method utilizes a third DOS
+ program, which mediates between SonED and the compress/expand programs. It will
+ suspend while they run, and when they are finished, a flag file is created, which
+ SonED is constantly checking for in the background. When the file is found, the
+ process is complete. It is deleted, and SonED continues to load
+-Convinient access to the ReadMe is now allowed through the "Help" menu
+-StealthPatch is now part of the SonED distribution package for easier access
+-Small updates to S2 object def, now includes graphical representation and description
+ for EHZ bridge objects, all spike sets, and all path swapper objects
+-Slight improvements were made in level drawing speed
+-An object type selector has been implemented to quickly change the type of an object
+ to any type that is described in the currently-loaded object def file
+-Quick-save to ROM. F3 performs a "Write->ROM->All" (ignoring items that can't be
+ written to the ROM) to the last level that was loaded by either "Read->ROM->All"
+ or by a save-state, and automatically saves the ROM to the same file it was loaded from
+-A data-dump system has been added for Sonic 1 and Sonic 2 for managing the placement
+ of individual parts manually. The files generated contain data as it would appear in-ROM
+
+
+***Release .30B***
+
+- This "What's New" list
+- Fixed bug that caused Sonic 2 level and tile data not to be saved
+- Level/Tile/Palette/Object Support for editing Sonic CD for PC (both versions)
+- Optimized map drawing for faster performance
+- Implemented Full Screen Mode (F4 to toggle)
+- Tile cursor translucency is disabled by default (faster drawing)
+- Translucency off allows 8-bit color in full-screen mode (faster)
+- Set default scroll speed higher
+- Dragging objects to the edge of the window scrolls the level
+- Holding CTRL key while setting object properties will add 16 for quicker type switching
+- Games that can load all data from ROM don't require a save-state at startup (currently only Sonic 2 and Sonic CD)

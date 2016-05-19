@@ -1,0 +1,191 @@
+<html>
+
+<head>
+<META NAME="Robots" CONTENT="NOINDEX">
+<title>Aridia Readme</title>
+
+<style>
+	body { font-family: "Verdana", "Arial", sans-serif; font-size: 10pt; background-color: rgb(248,249,254); color: rgb(68,77,87); }
+	li { font-size: 8pt; }
+	hr { color: rgb(68,77,87); background-color: rgb(248,249,254); }
+	a:link { text-decoration: none; color: rgb(65,105,226); }
+	a:visited { text-decoration: none; color: rgb(65,105,226); } 
+	a:active {	text-decoration: none; color: rgb(112,128,144); }
+	a:hover { text-decoration: none; color: rgb(112,128,144); }
+</style>
+
+</head>
+
+<body>
+
+<b>Aridia Readme</b>
+
+<br>
+<br>
+
+Thanks for downloading Aridia! Here's what's included in this package:
+<ul>
+  <li>aridia.exe - The main executable, just double-click.
+  <li>MegaDriveIO.dll - Required DLL, must be in the same folder as aridia.exe
+    (unless you're really clever and copy it to the GAC).
+  <li>TileEditor.dll, PaletteEditor.dll - Same deal.
+  <li>\data\ - Folder containing address locations of what can be edited in the
+    rom, must be under the folder containing aridia.exe.
+</ul>
+Please read the tutorial provided on the <a href="http://www.huguesjohnson.com/aridia/">Aridia
+homepage</a> before sending any questions. It explains how to use all the
+functions in the program and even discusses how to edit the source code 'n
+stuff.
+<br>
+<br>
+<b>Requirements</b> 
+<ul>
+  <li>    <a href="http://www.microsoft.com/downloads/details.aspx?familyid=262D25E3-F589-4842-8157-034D1E7CF3A3&amp;displaylang=en">
+	.NET Framework 1.1 (if you have XP or Vista then you probably already have this)</a>.
+  <li>Phantasy Star III rom image (binary format), &quot;<b>Phantasy Star 3 - Generations of Doom
+    (UE) [!].bin</b>&quot; in GoodGen, make a backup copy before editing, do not
+    bother asking me for a copy.
+  <li>Visual Studio .NET 2003+ (or <a href="http://msdn2.microsoft.com/en-us/express/default.aspx">Visual
+    Studio Express</a>) if you want to edit or build the source code.
+</ul>
+<br>
+
+<b>Version History</b>
+<ul>
+	<li>1.6 (Lensol Edition)
+      <ul>
+        <li>Fixed the &quot;equip by&quot; lookup value for some bandannas that were showing a blank value</li>
+        <li>Added technique level, cast %, and escape % to enemies tab</li>
+      </ul>
+    </li>	<li>1.5 (Shusoran Edition)
+      <ul>
+        <li>Added level table editing
+          <ul>
+            <li>XP table</li>
+            <li>Statistic growth</li>
+          </ul>
+        </li>
+        <li>Added ability to make a weapon or armor item not equippable by anyone</li>
+      </ul>
+    </li>
+	<li>1.4 (Cille Edition)
+      <ul>
+        <li>Added shop editing</li>
+        <li>Separated source code into a different download</li>
+      </ul>
+    </li>
+	<li>1.3 (Hazatak Edition)
+      <ul>
+        <li>Added character technique editing</li>
+        <li>Added find feature to palettes tab</li>
+        <li>Fixed (another) bug where editing inventory can modify techniques
+          (hopefully the last one)</li>
+      </ul>
+    </li>
+	<li>1.2 (Rysel Edition)
+      <ul>
+        <li>Added palette editing</li>
+        <li>Added dropdown list on Tile Editor to select a palette from the ROM
+          for preview</li>
+        <li>Rewrote methods to add/edit/delete character inventory
+          items to account for items being in reverse order at runtime</li>
+        <li>Fixed spelling of Gwyn's name on character tab</li>
+        <li>Relabeled &quot;Techniques&quot; to a more accurate &quot;Tech
+          Power&quot; on character tab</li>
+        <li>Added &quot;Item Editing Limitations&quot; dialog to explain known
+          issues with item editing</li>
+        <li>Added context (right-click) menu to item list on character tab</li>
+      </ul>
+    </li>
+	<li>1.1 (Yaata Edition)
+      <ul>
+        <li>Added a find feature to the script tab</li>
+        <li>Updated the Tile Editor to use the version from <a href="http://huguesjohnson.com/eisfrei/">Eisfrei</a></li>
+        <li>Added a new &quot;Thanks&quot; dialog off the main menu</li>
+        <li>Added &quot;PRESS START BUTTON&quot; text to dialog tab</li>
+        <li>Merged MDRomIO changes from Eisfrei (read/write byte array)</li>
+        <li>Fixed EquipBy value for the Laya/Gwyn/Kara combination</li>
+        <li>Fixed Gires/Poison being swapped on the enemy tab</li>
+      </ul>
+    </li>
+	<li>1.0 (Guardian Edition)
+      <ul>
+        <li>Added tile editing
+          <ul>
+            <li>Title logo</li>
+            <li>Fonts</li>
+            <li>Dialog border</li>
+          </ul>
+        </li>
+        <li>Changed the background of fields known to be problematic</li>
+      </ul>
+    </li>
+	<li>0.9 (Mantis Edition)
+      <ul>
+        <li>Added repair checksum functionality</li>
+        <li>Marked script editing &quot;final&quot; - can't think of anything
+          else to do with it</li>
+      </ul>
+    </li>
+	<li>0.8 (Slasher Edition)
+      <ul>
+        <li>Editing of enemy attributes</li>
+      </ul>
+    </li>
+	<li>0.7 (Seeker Edition)
+      <ul>
+        <li>Editing of character attributes and inventory</li>
+      </ul>
+    </li>
+	<li>0.6 (Flopper Edition)
+      <ul>
+        <li>Editing of weapon and armor attributes</li>
+        <li>Rollup of bug fixes from previous releases</li>
+        <li>Cleanup of validation rules for all input fields</li>
+        <li>Updated navigation panel to always highlight selected page</li>
+      </ul>
+    </li>
+	<li>0.5 (Blizrd Edition)
+      <ul>
+        <li>Editing of item attributes</li>
+        <li>Editing names for all inventory items</li>
+        <li>Fixed bug in how integers how read &amp; written (can't believe I
+          forgot integers are stored high-byte first on the Genesis)</li>
+        <li>Beta script editing</li>
+      </ul>
+    </li>
+	<li>0.4 (Tsveidon Edition)
+      <ul>
+        <li>Editing of shop dialog</li>
+        <li>Editing of save/load dialog</li>
+        <li>Editing of battle messages</li>
+      </ul>
+    </li>
+	<li>0.1-0.3 (Chirper Edition)
+      <ul>
+        <li>User interface (albeit with a lot of placeholders)</li>
+        <li>Foundational classes to read/write from a MegaDrive rom image</li>
+        <li>Editing dialog screen entries</li>
+      </ul>
+    </li>
+</ul>
+<br>
+<b>Download Mirrors</b>
+<br><br>
+Here are the web sites where current versions of Aridia are posted. 
+If you downloaded it somewhere else I doubt it's virus-laden, but it's probably not the latest version.
+<ul>
+  <li> <a href="http://huguesjohnson.com/aridia/">http://huguesjohnson.com/aridia/</a>
+  <li> <a href="http://www.romhacking.net/">http://www.romhacking.net/</a>
+  <li> <a href="http://www.psalgo.com/">http://www.psalgo.com/</a>
+</ul>
+ <br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+Aridia (c) 2007-2009 <a href="http://www.huguesjohnson.com/" target="_top">Hugues Johnson</a>
+</body>
+
+</html>
